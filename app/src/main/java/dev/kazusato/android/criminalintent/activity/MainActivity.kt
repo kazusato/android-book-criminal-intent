@@ -1,8 +1,8 @@
-package dev.kazusato.android.criminalintent
+package dev.kazusato.android.criminalintent.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import dev.kazusato.android.criminalintent.fragment.CrimeFragment
+import dev.kazusato.android.criminalintent.R
 import dev.kazusato.android.criminalintent.fragment.CrimeListFragment
 
 class MainActivity : AppCompatActivity() {
