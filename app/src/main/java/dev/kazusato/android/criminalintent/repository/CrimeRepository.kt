@@ -1,6 +1,7 @@
 package dev.kazusato.android.criminalintent.repository
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import androidx.room.Room
 import dev.kazusato.android.criminalintent.data.Crime
 import dev.kazusato.android.criminalintent.database.CrimeDatabase
@@ -31,11 +32,11 @@ class CrimeRepository private constructor(context: Context) {
             return INSTANCE ?: throw IllegalStateException("CrimeRepository must be initialized")
         }
     }
-    fun getCrimes(): List<Crime> {
+    fun getCrimes(): LiveData<List<Crime>> {
         return crimeDao.getCrimes()
     }
 
-    fun getCrime(id: UUID): Crime? {
+    fun getCrime(id: UUID): LiveData<Crime?> {
         return crimeDao.getCrime(id)
     }
 
